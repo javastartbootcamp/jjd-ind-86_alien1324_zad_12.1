@@ -27,13 +27,13 @@ class Main {
     public static String getExpression(int firInput, String operator, int secInput) {
         String expression = firInput + " " + operator + " " + secInput + " = ";
         if (Objects.equals(operator, "*")) {
-            expression += " " + (firInput * secInput);
+            expression += (firInput * secInput);
         } else if (Objects.equals(operator, "+")) {
-            expression += " " + (firInput + secInput);
+            expression += (firInput + secInput);
         } else if (Objects.equals(operator, "-")) {
-            expression += " " + (firInput - secInput);
+            expression += (firInput - secInput);
         } else {
-            expression += " " + ((double) firInput / secInput);
+            expression += ((double) firInput / secInput);
         }
         return expression;
     }
