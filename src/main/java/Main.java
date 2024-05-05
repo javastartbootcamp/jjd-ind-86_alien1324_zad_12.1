@@ -5,13 +5,13 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) throws IOException {
         File file = new File("operations.txt");
-        Scanner scan = null;
+        Scanner scan;
         try {
             scan = new Scanner(file);
         } catch (IOException e) {
             throw new IOException(e);
         }
-        StringBuilder fileToWrite = new StringBuilder("");
+        StringBuilder fileToWrite = new StringBuilder();
         while (scan.hasNextLine()) {
             int firstInput = scan.nextInt();
             String operator = scan.next();
@@ -39,8 +39,8 @@ class Main {
     }
 
     public static void printAndWrite(String file) throws IOException {
-        FileWriter fileWriter = null;
-        BufferedWriter writer = null;
+        FileWriter fileWriter;
+        BufferedWriter writer;
         try {
             fileWriter = new FileWriter("results.txt");
             writer = new BufferedWriter(fileWriter);
